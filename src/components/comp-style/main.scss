@@ -1,0 +1,112 @@
+.main {
+    padding: 45px 20px;
+    flex: 1 1 auto;
+
+    &__title {
+        @media(max-width:700px) {
+            text-align: center;
+        }
+    }
+
+    &__products {
+        margin-top: 39px;
+        display: flex;
+        justify-content: space-between;
+
+
+        @media(max-width:1400px) {
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+        }
+
+
+        @media(max-width:700px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        width: 280px;
+        border: 1px solid #e1e1e1;
+
+
+        @media(max-width:1400px) {
+            margin: 0 auto;
+
+            &:nth-child(n+3) {
+                margin-top: 30px;
+            }
+        }
+
+        @media(max-width:700px) {
+
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__card-img {
+
+        img {
+            width: 278px;
+        }
+    }
+
+    &__card-name {
+        width: 230px;
+        padding: 16px 0 0 22px;
+        cursor: pointer;
+    }
+
+    &__card-bottom {
+        padding: 22px 24px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card-price {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #343030;
+    }
+
+    &__card-discount {
+        display: block;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 21px;
+        text-decoration: line-through;
+        color: #a0a0a0;
+    }
+
+    &__card-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 48px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        color: #f4f6f9;
+        border: none;
+        background-color: #382E2B;
+
+        &:hover {
+            background-color: #776763;
+        }
+    }
+
+    &__card-btn-loading {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn_active {
+    background-color: #5b3a32;
+}
